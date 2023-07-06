@@ -10,7 +10,7 @@ We assume that companies forward invoices to each other. The company that issues
 Issued and received invoices are recorded by the CVATRegister class. Companies must register issued and received invoices. The register matches pairs of corresponding invoices and is able to find unpaired invoices. The invoice can be added to the register as well as canceled (e.g. in the case of incorrectly entered data). The class interface is as follows:
 
 - [X] implicit constructor;
-- [X] registerCompany ( name );
+- [X] registerCompany ( name )'\n'
      the method introduces the entered company into the register. The given name is the official name of the company, this name will be used in exports from the register. The return value is a success (true)/failure (false) indicator. Consider it a failure if a company with the same name already exists in the register. The registry is quite tolerant when comparing business names: it is not case sensitive when comparing, and it doesn't consider redundant spaces when comparing.
 - [X] addIssued ( invoice );
      method adds the invoice to the registry. This method is called by the company that issued the invoice. The return value is a success (true)/failure (false) flag. 
